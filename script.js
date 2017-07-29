@@ -5,7 +5,6 @@ app.config(function($routeProvider, $locationProvider){
 	$routeProvider
 	.when('/', 
 	{
-		controller: 'catController',
 		templateUrl: 'main.html'
 	})
 	.when('/cat', 
