@@ -5,19 +5,38 @@ app.config(function($routeProvider, $locationProvider){
 	$routeProvider
 	.when('/', 
 	{
-
-		templateURL: 'cat.html'
+		controller: 'catController',
+		templateUrl: 'main.html'
 	})
-	.when('/view2',
+	.when('/cat', 
 	{
-		controller: 'controlDog',
-		templateURL: 'dog.html'
-	}
-	.otherwise(template: '<h1>No Pets Here</h1>');
+		controller: 'catController',
+		templateUrl: 'cat.html'
+	})
+	.when('/dog',
+	{
+		controller: 'dogController',
+		templateUrl: 'dog.html'
+	})
+	.when('/tiger', 
+	{
+		controller: 'noController',
+		templateUrl: 'tiger.html'
+	})
+	.when('/pdog',
+	{
+		controller: 'familyController',
+		templateUrl: 'pdog.html'
+	})
+	.otherwise({template: '<h1>404</h1>'});
 	$locationProvider.hashPrefix('');
-})
+});
 
-app.controller('controlDog', function($scope){
-	
-})
+app.controller('catController', function($scope){
+	console.log('cat');
+});
+
+app.controller('dogController', function($scope){
+	console.log('dog');
+});
 

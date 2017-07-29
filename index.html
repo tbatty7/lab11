@@ -2,17 +2,21 @@
 <html>
 <head>
 	<title>Angular To Do List - Tim Batty</title>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
-	<script type="text/javascript" src="ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 <h1>Pets</h1>
-<a ng-href="#/dog">Dog</a>
-<a ng-href="#/cat">Cat</a>
+
 
 <div ng-app="petModule">
-
+<a ng-href="#/dog">Dog</a>
+<a ng-href="#/cat">Cat</a>
+<a ng-href="#/pdog">Little Dog</a>
+<a ng-href="#/tiger">Big Cat</a>
+<a ng-href="#/whale">Eagle</a>
+<br>
 	<ng-view></ng-view>
 	
 </div>
