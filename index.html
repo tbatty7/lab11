@@ -4,29 +4,16 @@
 	<title>Angular To Do List - Tim Batty</title>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
 	<script type="text/javascript" src="ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-	<script src="angular-route.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-<h1>Angular To do List</h1>
-<div ng-app="myModule" ng-controller="myController">
-	<div>
-	<input type="text" ng-model="newItem" placeholder="To Do List Items" name="">
-	<input type="submit" ng-click="addNewItem(newItem)" name="Submit" value="Add">
-	<input type="submit" ng-click="removeListItem(newItem)" name="Submit" value="Remove Last Item">
-<br>
-<br>
-	<input type="text" ng-model="searchList" placeholder="Search List" name="">
-	<h1>My To Do List</h1>
-		<p ng-repeat="item in toDo | filter: searchList | orderBy: '!completed'">{{item.item}}
-		<span ng-if="item.completed"> - Completed</span>
-		<span ng-if="!item.completed"> - Active</span>
-		<input type="checkbox" ng-model="item.completed"></input>
-		</p>
-<div ng-view=""></div>
-<ng-view></ng-view>
-	</div>
+<h1>Pets</h1>
+
+<div ng-app="petModule">
+
+	<ng-view></ng-view>
 	
 </div>
+
 </body>
 </html>
